@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+        <script src="mj.js"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <title>Math</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="">Home</a> |
+                <a href="groups.html">Groups</a> |
+                <a href="sint.html">Surface Integrals</a>
+            </nav>
+        </header>
+        <main>
+            <h1 class="title">Interesting Maths</h1>
+            <p class="data">
+                $$
+                    f(a)=\frac{1}{2\pi i} \oint_C \frac{f(z)}{z-a}dz
+                $$
+                <hr>
+            </p>
+            <p class="intro">
+                
+                <a href="groups.html">Group Theory</a>: the study of groups, 
+                a complex mathematical structure that applies to many different fields.
+                Examples include Rubik's Cube, Symmetries of a Triangle, Real Numbers, Complex Numbers, Matrices, and more.
+                <br><br><a href="sint.html">Surface Integrals</a>: a complex topic from calculus that brings
+                together everything else. It finds surface area. It relates to fluids, vectors, electricity and magnetism, and more. It also has a fun name,
+                flux.
+            </p>
+        </main>
+        <footer>
+            $$
+                \def\diagUpArrow#1{\smash{
+                    \raise.6em\rlap{\scriptstyle #1}
+                    \lower.3em{\mathord{\diagup}}
+                    \raise.52em{\!\mathord{\nearrow}}
+                }}
+                \def\diagDownArrow#1{\smash{
+                    \raise.5em\rlap{\ \ \ \scriptstyle #1}
+                    \raise.3em{\mathord{\diagdown}}
+                    \lower.52em{\!\mathord{\searrow}}
+                }}
+                \begin{CD}
+                    {R} @> {f} >> {G_1} \\
+                    @V{g}VV @AA{\zeta}A \\
+                    {G_2} @>>{\tau}> {D_n} \\
+                    &&&  \diagDownArrow{\gamma} \\
+                    &&&& {M} 
+                \end{CD}
+            $$
+            <hr>
+        </footer>
+    </body>
+</html>

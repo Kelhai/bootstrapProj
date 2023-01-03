@@ -1,0 +1,43 @@
+nav {
+    text-align: center;
+    border-style: double;
+    border-color: black;
+    border-width: 0%;
+    border-bottom-width: 2%;
+    padding: 1%;
+}
+.title {
+    text-align: center;
+    font-size: 250%;
+}
+.big-idea {
+    font-size: 175%;
+}
+.medium-idea {
+    font-size: 150%;
+}
+.idea {
+    font-size: 125%;
+}
+.data {
+    font-size: large;
+}
+body {
+    background-color: peachpuff;
+}
+hr {
+    border-color: black;
+}
+.intro {
+    font-size: x-large;
+}
+li {
+    margin: 1%;
+}
+#cube {
+    height: 200px;
+    width: 200px;
+}
+#cite {
+    font-size: 70%;
+}
