@@ -6,6 +6,7 @@
     border-bottom-width: 2%;
     padding: 1%;
 }*/
+
 .title {
     text-align: center;
     font-size: 250%;
@@ -22,9 +23,6 @@
 .data {
     font-size: large;
 }
-body {
-    background-color: peachpuff;
-}
 hr {
     border-color: black;
 }
@@ -34,10 +32,16 @@ hr {
 li {
     margin: 1%;
 }
+nav li {
+    display: inline-block;
+}
 #cube {
     height: 200px;
     width: 200px;
 }
 #cite {
     font-size: 70%;
+}
+.text-justify {
+    text-align: justify;
 }
