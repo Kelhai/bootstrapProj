@@ -16,7 +16,7 @@
 
     <body class="container-fluid bg-dark text-light">
         <header class="px-0 container-fluid">
-            <nav class="navbar-expand-md navbar navbar-fixed-top navbar-dark bg-dark" role="navigation">
+            <nav class="py-0 navbar-expand-md navbar fixed-top navbar-dark bg-dark" role="navigation">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Maths</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExpand">
@@ -27,64 +27,71 @@
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="groups.html">Groups</a></li>
                             <li class="nav-item"><a class="nav-link active" href="#">Surface Integrals</a></li>
-                            <li class="nav-item"><a class="nav-link" href="res.html">Residue Theorem</a></li>
-                            <li class="nav-item"><a class="nav-link" href="meet.html">Meet the Creator</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <main>
-            <h1 class="title">Surface Integral</h1>
-            <h2 class="big-idea">Motivation</h2>
-            <img src="src/torus.png" id="cube">
-            <p class="cite">KE, CC-BY, "torus".</p>
-            <p class="data">
-                Have you ever thought to yourself, "I wonder how much powdered sugar I could get on a donut?"
-                <br>
-                I would assume no but I can get you on the right track.
-            </p>
-            <h2 class="big-idea">Vectors</h2>
-            <p class="data">
-                Disclaimer: this page will be a little out there, even for me.
-                <br><br>
-                A vector is a combination of a scalar and a direction. Technically, that is. Less formally, we can say that a vector is
-                the combination of a length and a direction. For example, an arrow pointing up with length 3 is a vector.
-                There are many ways to notate a vector but for this we will use the standard $x$, $y$ ordered pair notation with angled brackets. A vector is assumed
-                to have its tail at the origin and its head at the point shown in $\langle x, y\rangle$. Its length (by simple trigonometry) is 
-                $\sqrt{x^2 + y^2}$ and its direction (or angle) is $\tan^{-1}(\frac{y}{x})$.
-                <br><br>
-                Easy enough, right? Right, but now it gets worse.
-                <br>
-                To find the surface area of a donut (torus) we must realize that a donut is 3-dimensional.
-                <br>
-                That means that our vectors will be of the form $\vec{v} = \langle x,y,z\rangle$. Our length will be $\sqrt{x^2+y^2+z^2}$ and our direction will be a little
-                bit (lotta bit) more complicated and unnecessary.
-            </p>
-            <h3 class="idea">Operations</h3>
-            <p class="data">
-                Let us notice that $a \cdot \langle x , y, z \rangle = \langle ax, ay, az \rangle$. Where $a$ is just a number.
-                <br><br>
-                Another property to notice is that $\langle x, y, z \rangle + \langle a, b, c \rangle = \langle x + a, y + b, z + c \rangle$.
-                <br><br>
-                Using $\hat{\imath} = \langle 1, 0, 0 \rangle$, $\hat{\jmath} = \langle 0, 1, 0 \rangle$, and $\hat{\mathcal{k}} = \langle 0, 0, 1 \rangle$,
-                We can rewrite any vector $\langle x,y,z\rangle$ as $x\hat{\imath} + y\hat{\jmath} + z\hat{\mathcal{k}}$.
-                <br><br>
-                We define the <em>cross product</em> of two vectors to be the determinant of the matrix made up of the basis vectors and the two
-                other vectors together, that is: for any two vectors, $\vec{u} = \langle x,y,z\rangle$ and $\vec{v} = \langle a,b,c \rangle$,
-                $$
-                \vec{u} \times \vec{v} = \left| 
-                \begin{matrix}
-                \hat{\imath} & \hat{\jmath} & \hat{\mathcal{k}} \\
-                x & y & z \\
-                a & b & c \\
-                \end{matrix}
-                \right| =
-                \hat{\imath}(yc - zb) + \hat{\jmath}(za - xc) + \hat{\mathcal{k}}(xb-ya)
-                = \langle yc-zb,\; za - xc,\; xb-ya \rangle
-                $$
-                Geometrically, the cross product gives us a new vector that is one of the vectors that is perpendicular to both.
-            </p>
+        <main class="container-fluid mt-5">
+            <div class="h-25"> </div>
+            <h1 class="title mt-5">Surface Integral</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="big-idea">Motivation</h2>
+                    <img src="src/torus.png" id="cube">
+                    <p class="cite">KE, CC-BY, "torus".</p>
+                    <p class="data">
+                        Have you ever thought to yourself, "I wonder how much powdered sugar I could get on a donut?"
+                        <br>
+                        I would assume no but I can get you on the right track.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="big-idea">Vectors</h2>
+                    <p class="data">
+                        Disclaimer: this page will be a little out there, even for me.
+                        <br><br>
+                        A vector is a combination of a scalar and a direction. Technically, that is. Less formally, we can say that a vector is
+                        the combination of a length and a direction. For example, an arrow pointing up with length 3 is a vector.
+                        There are many ways to notate a vector but for this we will use the standard $x$, $y$ ordered pair notation with angled brackets. A vector is assumed
+                        to have its tail at the origin and its head at the point shown in $\langle x, y\rangle$. Its length (by simple trigonometry) is 
+                        $\sqrt{x^2 + y^2}$ and its direction (or angle) is $\tan^{-1}(\frac{y}{x})$.
+                        <br><br>
+                        Easy enough, right? Right, but now it gets worse.
+                        <br>
+                        To find the surface area of a donut (torus) we must realize that a donut is 3-dimensional.
+                        <br>
+                        That means that our vectors will be of the form $\vec{v} = \langle x,y,z\rangle$. Our length will be $\sqrt{x^2+y^2+z^2}$ and our direction will be a little
+                        bit (lotta bit) more complicated and unnecessary.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="idea">Operations</h3>
+                    <p class="data">
+                        Let us notice that $a \cdot \langle x , y, z \rangle = \langle ax, ay, az \rangle$. Where $a$ is just a number.
+                        <br><br>
+                        Another property to notice is that $\langle x, y, z \rangle + \langle a, b, c \rangle = \langle x + a, y + b, z + c \rangle$.
+                        <br><br>
+                        Using $\hat{\imath} = \langle 1, 0, 0 \rangle$, $\hat{\jmath} = \langle 0, 1, 0 \rangle$, and $\hat{\mathcal{k}} = \langle 0, 0, 1 \rangle$,
+                        We can rewrite any vector $\langle x,y,z\rangle$ as $x\hat{\imath} + y\hat{\jmath} + z\hat{\mathcal{k}}$.
+                        <br><br>
+                        We define the <em>cross product</em> of two vectors to be the determinant of the matrix made up of the basis vectors and the two
+                        other vectors together, that is: for any two vectors, $\vec{u} = \langle x,y,z\rangle$ and $\vec{v} = \langle a,b,c \rangle$,
+                        $$
+                        \vec{u} \times \vec{v} = \left| 
+                        \begin{matrix}
+                        \hat{\imath} & \hat{\jmath} & \hat{\mathcal{k}} \\
+                        x & y & z \\
+                        a & b & c \\
+                        \end{matrix}
+                        \right| =
+                        \hat{\imath}(yc - zb) + \hat{\jmath}(za - xc) + \hat{\mathcal{k}}(xb-ya)
+                        = \langle yc-zb,\; za - xc,\; xb-ya \rangle
+                        $$
+                        Geometrically, the cross product gives us a new vector that is one of the vectors that is perpendicular to both.
+                    </p>
+                </div>
+            </div>
             <hr>
             <h2 class="big-idea">Surface Integral</h2>
             <p class="data">
